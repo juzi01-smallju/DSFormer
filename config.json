@@ -1,0 +1,39 @@
+{
+  "preprocess":
+  {
+    "split_num": 500,
+    "data_path": "./data/HRF/256",
+    "data_sets": "HRF",
+    "patch_size": 256,
+    "resources":
+      {
+        "HRF": "./original_datasets/retina_data/HRF",
+        "DRIVE": "./original_datasets/retina_data/DRIVE",
+        "LES": "./original_datasets/retina_data/LES",
+	    "IOSTAR": "./original_datasets/retina_data/iostar",
+	    "INSPIRE": "./original_datasets/retina_data/INSPIRE_AV"
+      }
+  },
+
+  "net":
+  {
+    "in_channel": 3,
+    "out_channel": 3,
+    "init_ratio": 2,
+    "bridge_setting": "1234"
+  },
+
+  "train":
+  {
+    "device": 0,
+    "patch_size": 256,
+    "batch_size": 4,
+    "path": "./data/DRIVE/256",
+    "save_path": "./log6/a=1",
+    "lr": 1e-3,
+    "epochs": 100,
+    "decay_epoch": 40,
+    "decay_rate": 0.1,
+    "data_mode": "three channels"
+  }
+}
